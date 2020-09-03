@@ -7,9 +7,8 @@ pipeline{
         stage('Build application'){
             agent any
             steps {
-                sh 'mvn -v'
+                sh 'mvn clean install'
             }
-
         }
 
         stage('Deploy applicaiton'){
@@ -19,6 +18,6 @@ pipeline{
             }
         }
 
-        
+
     }
 }
